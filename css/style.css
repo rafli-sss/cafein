@@ -1,6 +1,8 @@
 :root {
   --primary-color: #1c0a00;
   --secondary-color: #361500;
+  --bg-primary: #120600;
+  --text-primary: #fff;
   /* #603601 #cc9544 */
 }
 
@@ -72,6 +74,8 @@ img {
 
 /* My style */
 body {
+  background-color: var(--bg-primary);
   /* font-family: 'Merienda', cursive; */
   font-family: 'Montserrat', sans-serif;
+  color: var(--text-primary);
 }
