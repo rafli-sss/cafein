@@ -163,9 +163,14 @@ body {
 }
 
 .navbar-nav__link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 0.75rem;
   text-transform: capitalize;
+}
+
+.icon {
+  margin-right: 6px;
 }
 
 .navbar-nav__list::after {
@@ -298,12 +303,17 @@ body {
   .navbar-nav {
     position: static;
     flex-direction: row;
+    gap: 0.25rem;
     width: unset;
     max-width: unset;
     height: unset;
     background-color: unset;
     backdrop-filter: unset;
     transform: translateX(0);
+  }
+
+  .navbar-nav__link {
+    padding: 0.5rem;
   }
 
   .navbar-nav-toggle {
@@ -324,6 +334,14 @@ body {
 }
 
 @media (min-width: 1200px) {
+  .navbar-nav {
+    gap: 1rem;
+  }
+
+  .navbar-nav__link {
+    padding: 0.75rem;
+  }
+
   .container--hero {
     padding: 0 12.5rem;
   }
