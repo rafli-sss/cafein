@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Café</title>
+    <title>Café in</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,9 +18,9 @@
     <header>
       <nav class="navbar">
         <div class="navbar__content">
-          <a href="#hero" class="brand">
+          <a href="#hero" class="heading-brand brand">
             <i width="40" height="40" data-feather="coffee"></i>
-            <span>Café</span>
+            Café<span class="brand__span">in</span>
           </a>
 
           <button
@@ -43,7 +43,7 @@
             </li>
             <li class="navbar-nav__list">
               <a href="#menu" class="navbar-nav__link">
-                <i class="icon" data-feather="coffee"></i>our menu
+                <i class="icon" data-feather="coffee"></i>menu
               </a>
             </li>
             <li class="navbar-nav__list">
@@ -66,7 +66,9 @@
           <div class="section section--full section--hero">
             <div class="container container--hero">
               <hgroup class="hgroup">
-                <h1 class="hgroup__heading">Café</h1>
+                <h1 class="hgroup__heading brand">
+                  Café <span class="brand__span">in</span>
+                </h1>
                 <p class="hgroup__sub-heading">Where Every Cup Tells a Story</p>
               </hgroup>
               <a href="#menu" class="btn btn--primary btn--large">Our menu</a>
@@ -75,12 +77,63 @@
         </section>
         <section id="about">
           <div class="section section--about">
-            <div class="container container--about">
-              <div class="flex">
-                <div class="flex__item"></div>
-                <div class="flex__item"></div>
-                <div class="flex__item"></div>
-                <div class="flex__item"></div>
+            <div class="wrapper wrapper--dark">
+              <div class="container container--center">
+                <div class="text-wrapper text-wrapper--lg text-wrapper--center">
+                  <div class="flex flex--center">
+                    <div class="flex__item flex__item--w-sm-1/2 flex--gap-1">
+                      <div class="display">3</div>
+                      <div class="letter-gap">Branches</div>
+                    </div>
+                    <div class="flex__item flex__item--w-sm-1/2 flex--gap-1">
+                      <div class="display">10</div>
+                      <div class="letter-gap">Foods</div>
+                    </div>
+                    <div class="flex__item flex__item--w-sm-1/2 flex--gap-1">
+                      <div class="display">15</div>
+                      <div class="letter-gap">Coffees</div>
+                    </div>
+                    <div class="flex__item flex__item--w-sm-1/2 flex--gap-1">
+                      <div class="display">8</div>
+                      <div class="letter-gap">Desserts</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper wrapper--about-content">
+              <div class="container container--center container--about">
+                <div
+                  class="flex flex--2-md flex--between flex--items-center text-wrapper"
+                >
+                  <div class="flex__item flex__item--w-md-1/2">
+                    <h2 class="text-wrapper__head">About</h2>
+                    <p class="paragraph">
+                      At
+                      <span class="brand"
+                        >Café <span class="brand__span">in</span></span
+                      >, we believe that every cup of coffee should be an
+                      experience worth savoring. Our journey began with a
+                      passion for the art of coffee-making and a desire to
+                      create a haven for fellow coffee enthusiasts.
+                    </p>
+                    <p class="paragraph">
+                      From the moment you step into our cozy café, you'll be
+                      enveloped in the inviting aroma of freshly roasted beans
+                      and greeted by our friendly team of dedicated baristas. We
+                      take pride in our commitment to sourcing the finest beans
+                      from sustainable and ethical sources, ensuring that each
+                      cup is a true reflection of the rich coffee cultures we
+                      celebrate.
+                    </p>
+                  </div>
+                  <div
+                    class="flex__item flex__item--w-md-1/2 main-img main-img--animate-1"
+                    id="about-img"
+                  >
+                    <img src="img/exterior.jpg" alt="Exterior" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
