@@ -106,6 +106,10 @@ body {
   color: rgb(var(--text-primary));
 }
 
+main {
+  position: relative;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -211,6 +215,10 @@ body {
   flex-wrap: wrap;
 }
 
+.flex__item--w-xs-1\/2 {
+  width: 50%;
+}
+
 .flex__item--w-md-1\/2 {
   width: 100%;
   padding: 2rem;
@@ -301,7 +309,8 @@ body {
   text-align: center;
 }
 
-.text-wrapper--lg {
+.text-wrapper--lg,
+.our-menu__name {
   font-size: 2rem;
   font-weight: 500;
 }
@@ -424,6 +433,92 @@ body {
   color: rgb(var(--tertiary-color));
 }
 
+.grid {
+  display: grid;
+}
+
+.grid--main-template {
+  grid-template-areas:
+    'main'
+    'basic-1'
+    'basic-2';
+  grid-template-rows: repeat(1fr);
+  grid-template-columns: repeat(1fr);
+}
+
+.grid__item--relative {
+  position: relative;
+}
+
+.grid__item--main {
+  grid-area: main;
+}
+
+.grid__item--basic:first-child {
+  grid-area: basic-1;
+}
+
+.grid__item--basic:last-child {
+  grid-area: basic-2;
+}
+
+.our-menu {
+  position: absolute;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.our-menu-list {
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 13rem;
+  height: 20rem;
+}
+
+.our-menu-list__item {
+  display: flex;
+  gap: 1rem;
+}
+
+.our-menu-list__item__thumb {
+  width: calc(5rem + ((6 - 5) * 16) * ((100vw - 300px) / (1600 - 300)));
+  aspect-ratio: 1 / 1;
+  border: 3px solid rgb(var(--tertiary-color));
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.our-menu-list__item__name {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  .grid--main-template {
+    grid-template-areas:
+      'main main'
+      'basic-1 basic-2';
+  }
+}
+
 @media (min-width: 768px) {
   .section--hero {
     background-image: url('../img/hero-lg.jpg');
@@ -469,9 +564,34 @@ body {
   .flex__item--w-md-1\/2 {
     width: 50%;
   }
+
+  .flex__item--w-md-full {
+    width: unset;
+  }
+
+  .flex--md-center {
+    justify-content: center;
+  }
+
+  .grid--main-template {
+    grid-template-areas:
+      'main main basic-1'
+      'main main basic-2';
+  }
 }
 
 @media (min-width: 1024px) {
+  .our-menu {
+    opacity: 0;
+    transform: scale(0.25);
+    transition: all 0.25s ease-in 0.1s;
+  }
+
+  .grid__item--main:hover > .our-menu,
+  .grid__item--basic:hover > .our-menu {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @media (min-width: 1200px) {
