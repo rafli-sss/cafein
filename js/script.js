@@ -14,3 +14,19 @@ const closeNavbar = () => {
 
 navbarToggler.addEventListener('click', toggleNavbar);
 mainContent.addEventListener('click', closeNavbar);
+
+// Swiper
+const swiper = new Swiper('.swiper', {
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  speed: 750,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+  },
+});

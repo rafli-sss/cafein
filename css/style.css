@@ -5,6 +5,8 @@
   --tertiary-color: 134, 94, 36;
   --body-primary: 8, 2, 0;
   --text-primary: 255, 255, 255;
+  --swiper-theme-color: #fff;
+  --swiper-navigation-sides-offset: 50px;
   /* --s: #603601 #cc9544; */
 }
 
@@ -237,6 +239,10 @@ main {
   align-items: center;
 }
 
+.flex--column {
+  flex-direction: column;
+}
+
 .flex--between {
   justify-content: space-between;
 }
@@ -254,7 +260,8 @@ main {
 }
 
 .section--hero,
-.wrapper--about-content {
+.wrapper--about-content,
+.section--testimony {
   position: relative;
   display: flex;
   justify-content: center;
@@ -263,7 +270,8 @@ main {
   /* filter: brightness(0.5); */
 }
 
-.wrapper--about-content {
+.wrapper--about-content,
+.section--testimony {
   background-image: url('../img/interior.jpg');
   background-attachment: fixed;
 }
@@ -282,7 +290,8 @@ main {
   );
 }
 
-.wrapper--about-content::after {
+.wrapper--about-content::after,
+.section--testimony::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -290,22 +299,23 @@ main {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.container--hero {
+.container--hero,
+.container--about,
+.container--testimony {
   position: relative;
   z-index: 1;
-  text-align: center;
 }
 
-.container--about {
-  position: relative;
-  z-index: 1;
+.container--hero {
+  text-align: center;
 }
 
 .text-wrapper {
   margin-bottom: 2rem;
 }
 
-.text-wrapper--center {
+.text-wrapper--center,
+.text-wrapper__head--center {
   text-align: center;
 }
 
@@ -509,6 +519,32 @@ main {
 .our-menu-list__item__name {
   font-size: 1.25rem;
   font-weight: 500;
+}
+
+.testimony {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 3rem;
+}
+
+.testimony__name {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.testimony__img {
+  margin: 0 auto;
+  width: calc(7rem + ((8 - 7) * 16) * ((100vw - 300px) / (1600 - 300)));
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.testimony__text {
+  max-width: 60ch;
+  margin: 0 auto;
 }
 
 @media (min-width: 576px) {
