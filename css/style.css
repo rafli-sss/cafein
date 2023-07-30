@@ -103,7 +103,12 @@ iframe {
     -1px -1px 0 3px rgba(var(--tertiary-color), 0.75);
 }
 
+html {
+  scroll-padding-top: 2rem;
+}
+
 body {
+  overflow-x: hidden;
   background-color: rgb(var(--body-primary));
   /* font-family: 'Merienda', cursive; */
   font-family: 'Montserrat', sans-serif;
@@ -624,6 +629,14 @@ main {
 
 .form-group__input--textarea {
   resize: none;
+}
+
+.section--footer {
+  background-color: rgb(var(--primary-color));
+}
+
+.nav {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 576px) {
