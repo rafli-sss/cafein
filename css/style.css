@@ -8,7 +8,6 @@
   --text-primary: 255, 255, 255;
   --swiper-theme-color: #fff;
   --swiper-navigation-sides-offset: 50px;
-  /* --s: #603601 #cc9544; */
 }
 
 /* CSS Reset */
@@ -17,10 +16,6 @@
 ::after {
   box-sizing: border-box;
   border: 0 solid black;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -104,6 +99,7 @@ iframe {
 }
 
 html {
+  scroll-behavior: smooth;
   scroll-padding-top: 2rem;
 }
 
@@ -332,14 +328,11 @@ main {
   z-index: 1;
 }
 
-.container--hero {
-  text-align: center;
-}
-
 .text-wrapper {
   margin-bottom: 2rem;
 }
 
+.container--hero,
 .text-wrapper--center,
 .text-wrapper__head--center,
 .text-wrapper__sub-head--center {
@@ -358,13 +351,15 @@ main {
 
 .text-wrapper__head {
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: calc(2rem + ((3 - 2) * 16) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 700;
 }
 
 .text-wrapper__sub-head {
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: calc(
+    1.5rem + ((2.5 - 1.5) * 16) * ((100vw - 300px) / (1600 - 300))
+  );
   font-weight: 600;
 }
 
@@ -397,7 +392,6 @@ main {
   position: absolute;
   width: 64px;
   height: 64px;
-  /* transform: translate(0); */
   transition: all 0.5s ease-in 0.1s;
 }
 
@@ -420,10 +414,18 @@ main {
   text-align: justify;
 }
 
+.brand,
 .hgroup__heading {
   font-family: 'Merienda', cursive;
-  font-size: calc(4rem + ((5 - 4) * 16) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 700;
+}
+
+.brand__span {
+  color: rgb(var(--tertiary-color));
+}
+
+.hgroup__heading {
+  font-size: calc(4rem + ((5 - 4) * 16) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .hgroup__sub-heading {
@@ -477,15 +479,6 @@ main {
 
 .letter-gap {
   letter-spacing: 2px;
-}
-
-.brand {
-  font-family: 'Merienda', cursive;
-  font-weight: 700;
-}
-
-.brand__span {
-  color: rgb(var(--tertiary-color));
 }
 
 .grid {
