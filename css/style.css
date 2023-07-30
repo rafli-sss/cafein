@@ -3,6 +3,7 @@
   --primary-hover-color: 84, 59, 22;
   --secondary-color: 54, 21, 0;
   --tertiary-color: 134, 94, 36;
+  --tertiary-hover-color: 124, 87, 33;
   --body-primary: 8, 2, 0;
   --text-primary: 255, 255, 255;
   --swiper-theme-color: #fff;
@@ -88,7 +89,8 @@ svg {
   display: inline-block;
 }
 
-img {
+img,
+iframe {
   display: block;
   max-width: 100%;
   height: auto;
@@ -174,8 +176,10 @@ main {
   text-transform: capitalize;
 }
 
-.icon {
+.icon,
+.btn__icon {
   margin-right: 6px;
+  vertical-align: middle;
 }
 
 .navbar-nav__list::after {
@@ -234,6 +238,10 @@ main {
   padding: 1rem;
 }
 
+.flex.flex--gap-2 {
+  gap: 2rem;
+}
+
 .flex--center {
   justify-content: center;
   align-items: center;
@@ -247,12 +255,25 @@ main {
   justify-content: space-between;
 }
 
+.flex--rounded {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.flex--bg-primary {
+  background-color: rgba(var(--primary-color));
+}
+
 .flex--items-center {
   align-items: center;
 }
 
 .flex__item {
   flex: 1 1 auto;
+}
+
+.flex__item--p-2 {
+  padding: 2rem;
 }
 
 .section--full {
@@ -315,7 +336,8 @@ main {
 }
 
 .text-wrapper--center,
-.text-wrapper__head--center {
+.text-wrapper__head--center,
+.text-wrapper__sub-head--center {
   text-align: center;
 }
 
@@ -333,6 +355,12 @@ main {
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 700;
+}
+
+.text-wrapper__sub-head {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .main-img {
@@ -417,8 +445,20 @@ main {
   background-color: rgb(var(--primary-color));
 }
 
+.btn--tertiary {
+  background-color: rgb(var(--tertiary-color));
+}
+
+.btn--no-shadow {
+  box-shadow: none;
+}
+
 .btn--primary:hover {
   background-color: rgb(var(--primary-hover-color));
+}
+
+.btn--tertiary:hover {
+  background-color: rgb(var(--tertiary-hover-color));
 }
 
 .hgroup {
@@ -545,6 +585,45 @@ main {
 .testimony__text {
   max-width: 60ch;
   margin: 0 auto;
+}
+
+.map {
+  min-width: 500px;
+  width: 100%;
+  min-height: 250px;
+  height: 100%;
+}
+
+.form {
+  max-width: 500px;
+}
+
+.form--center {
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group--center {
+  text-align: center;
+}
+
+.form-group__label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group__input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #000;
+}
+
+.form-group__input--textarea {
+  resize: none;
 }
 
 @media (min-width: 576px) {
