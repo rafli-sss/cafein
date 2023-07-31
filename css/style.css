@@ -107,7 +107,6 @@ html {
 body {
   overflow-x: hidden;
   background-color: rgb(var(--body-primary));
-  /* font-family: 'Merienda', cursive; */
   font-family: 'Montserrat', sans-serif;
   color: rgb(var(--text-primary));
 }
@@ -638,6 +637,10 @@ main {
 
 .nav {
   margin-bottom: 1rem;
+}
+
+.swiper {
+  overflow: hidden;
 }
 
 @media (min-width: 576px) {
