@@ -7,7 +7,7 @@
   --body-primary: 8, 2, 0;
   --text-primary: 255, 255, 255;
   --swiper-theme-color: #fff;
-  --swiper-navigation-sides-offset: 50px;
+  /* --swiper-navigation-sides-offset: 50px; */
   --swiper-pagination-bullet-inactive-color: #fff;
 }
 
@@ -205,11 +205,6 @@ main {
 .link:hover,
 .navbar-nav__link:hover {
   color: rgb(var(--tertiary-color));
-}
-
-.container {
-  max-width: 1024px;
-  padding: 2rem 1rem;
 }
 
 .container--center {
@@ -639,8 +634,9 @@ main {
   margin-bottom: 1rem;
 }
 
-.swiper {
-  overflow: hidden;
+.container {
+  width: 100%;
+  padding: 2rem 1rem;
 }
 
 @media (min-width: 576px) {
@@ -740,6 +736,10 @@ main {
 }
 
 @media (min-width: 1200px) {
+  .container {
+    max-width: 1024px;
+  }
+
   .navbar-nav {
     gap: 1rem;
   }
