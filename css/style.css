@@ -8,6 +8,7 @@
   --text-primary: 255, 255, 255;
   --swiper-theme-color: #fff;
   --swiper-navigation-sides-offset: 50px;
+  --swiper-pagination-bullet-inactive-color: #fff;
 }
 
 /* CSS Reset */
@@ -492,6 +493,13 @@ main {
     'basic-2';
   grid-template-rows: repeat(1fr);
   grid-template-columns: repeat(1fr);
+  padding: 2rem;
+}
+
+.grid-img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .grid__item--relative {
@@ -696,8 +704,21 @@ main {
 
   .grid--main-template {
     grid-template-areas:
-      'main main basic-1'
-      'main main basic-2';
+      'main main'
+      'basic-1 basic-2';
+  }
+
+  .our-menu {
+    padding: 2.5rem;
+  }
+
+  .our-menu__name {
+    font-size: 3rem;
+  }
+
+  .our-menu__desc,
+  .our-menu__price {
+    font-size: 1.5rem;
   }
 }
 
